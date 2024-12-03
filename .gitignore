@@ -1,0 +1,6 @@
+.nextflow.log*
+.nextflow
+work
+/raw_fastq/**/*
+!/raw_fastq/SRR16320307_1.fastq
+!/raw_fastq/SRR16320307_2.fastq
