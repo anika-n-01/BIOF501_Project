@@ -25,4 +25,7 @@ work/
 ../others/
 ../*.tre
 ../*.sh
-
+# Exception: Allow files explicitly
+!ASVs_main.nf
+!README.md
+!nextflow.config
