@@ -51,7 +51,7 @@ This workflow implements steps to generate an ASV count matrix using tools such 
 
 ## Input Data
 
-This workflow can process raw 16s rRNA FASTQ data. As an example, we provide paired end sequencing data from the sudy titled, 'Study: Evaluation of changes to the oral microbiome based on S16 rRNA sequencing among children treated for cancer'. Here is the SRA accession number: SRR16320307. This data is located in the raw_fastq directory.
+This workflow can process raw 16s rRNA FASTQ data. As an example, we provide paired end sequencing data from the sudy titled, 'Study: Evaluation of changes to the oral microbiome based on S16 rRNA sequencing among children treated for cancer'. Here is the SRA accession number: SRR16320307. This data is located in the raw_fastq directory [8].
 
 ## Workflow Summary
 
@@ -160,6 +160,9 @@ https://pmc.ncbi.nlm.nih.gov/articles/PMC6129281/
 
 [7] Rognes T, Flouri T, Nichols B, Quince C, Mahé F. VSEARCH: a versatile open source tool for metagenomics. PeerJ. 2016 Oct 18;4:e2584. doi: 10.7717/peerj.2584. PMID: 27781170; PMCID: PMC5075697.
 https://pmc.ncbi.nlm.nih.gov/articles/PMC5075697/
+
+[8] Raw Data From: Proc P, Szczepańska J, Zarzycka B, Szybka M, Borowiec M, Płoszaj T, Fendler W, Chrzanowski J, Zubowska M, Stolarska M, Młynarski W. Evaluation of Changes to the Oral Microbiome Based on 16S rRNA Sequencing among Children Treated for Cancer. Cancers (Basel). 2021 Dec 21;14(1):7. doi: 10.3390/cancers14010007. PMID: 35008173; PMCID: PMC8750156.
+https://trace.ncbi.nlm.nih.gov/Traces/?run=SRR16320307
 
 
 
