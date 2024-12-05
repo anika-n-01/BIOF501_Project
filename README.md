@@ -4,11 +4,14 @@
 
 ---------------------
 
-## Repository Contents- 
+## Repository Contents 
+
 ### Directories
 
   + `raw_fastq`: Contains raw FASTQ files used as input for the workflow. 
-  
+
+  + `images`: Includes images referenced in README.md. 
+
   + `results`: Generated from the pipeline and contains all the outputs, including intermediate and final results. 
         
   + `work`: Generated from the pipeline and stores intermediate files created during Nextflow execution. 
@@ -46,6 +49,10 @@ VSEARCH is a comprehensive and versatile tool that includes most commands needed
 
 This workflow implements steps to generate an ASV count matrix using tools such as `fastp` and `vsearch`. It processes raw FASTQ files into a format ready for ecological and statistical analysis.
 
+## Input Data
+
+This workflow can process raw 16s rRNA FASTQ data. As an example, we provide paired end sequencing data from the sudy titled, 'Study: Evaluation of changes to the oral microbiome based on S16 rRNA sequencing among children treated for cancer'. Here is the SRA accession number: SRR16320307. This data is located in the raw_fastq directory.
+
 ## Workflow Summary
 
 This workflow includes the following steps:
@@ -60,7 +67,7 @@ This workflow includes the following steps:
 8. **Singleton Removal**: Low-abundance sequences (singletons) are removed.
 9. **Count Matrix Generation**: Reads are mapped back to ASVs to create the count matrix.
 
-Here is visualization of the workflow:
+Here is a visualization of the workflow:
 
 ![Workflow Illustration](images/VSearch_501.png)
 
@@ -69,15 +76,10 @@ Here is visualization of the workflow:
 ## Dependencies
 
 Installing and running this workflow requires the following tools:
-- `Nextflow`
-- `Docker` (for containerized execution)
+- Nextflow (version 24.10.1 or higher) - [Click here to install](https://www.nextflow.io/docs/latest/install.html)
+- Docker (version 27.3.1 or higher) - [Click here to install](https://docs.docker.com/desktop/)
 
-
-The key software dependencies include:
-- `fastp` (for quality control)
-- `vsearch` (for merging, filtering, dereplication, and chimera detection)
-
---------------------
+------------------
 
 ## Installation
 
@@ -85,19 +87,26 @@ The key software dependencies include:
 
 ```bash
 git clone git@github.com:anika-n-01/BIOF501_Project.git
+```
+
+```bash
 cd BIOF501_Project
 ```
-### Usage
+
+## Usage
 
 To run the pipeline on the FASTQ files in raw_fastq directory, execute the following command:
 
 ```bash
 nextflow run ASVs_main.nf -with-report report.html -with-timeline timeline.html -with-trace trace.txt -with-dag dag.png
 ```
-### Expected Outputs
+
+## Expected Outputs
 
 1) The pipeline should generate a results directory with the following file structure. 
+
 ![Tree Illustration](images/results_tree.png)
+
 2) The following describes the key output files. 
 - Quality-Controlled Reads: Cleaned reads saved in the results/fastpQC directory.
 - Merged Reads: Paired-end reads merged into single reads in results/mergeReads.
@@ -107,20 +116,31 @@ nextflow run ASVs_main.nf -with-report report.html -with-timeline timeline.html 
 - ASV Count Matrix: A table of ASV abundances across samples in results/createCountMatrix.
 
 3) The key output of ASV count table should be stored in ASV.fasta. Here's an example of the expected output. The first column is populated by the ASV number and the second column is populated with the ASV count present in a particular sample.
+
 ![ASV Count Table Illustration](images/ASV_count_table-1.png)
 
 ### Other outputs
+
 In addition to the key results, the pipeline also generates the folowing files to help you monitor the execution of the workflow.
+
 1) report.html- Provides a comprehensive summary of the workflow execution, including statistics on runtime, CPU usage and memory usage. 
+
 ![DAG Illustration](images/report.png)
+
 2) timeline.html-  Displays a Gantt chart of task execution timelines.
+
 ![Timeline.html Illustration](images/timeline.png)
+
 3) trace.txt- Provides a tabular log of various task-level details. 
+
 ![Text.txt Illustration](images/text_txt.png)
+
 4) dag.png- Provides a visual representation of the workflow as a Directed Acyclic Graph (DAG).
+
 ![DAG Illustration](images/dag.png)
 
 ## References-
+
 [1] Barea JM. Future challenges and perspectives for applying microbial biotechnology in sustainable agriculture based on a better understanding of plant-microbiome interactions. Journal of soil science and plant nutrition. 2015 Jun 1;15(2):261–82.
 https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0264443#
 
