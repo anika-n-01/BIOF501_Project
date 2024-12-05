@@ -7,3 +7,22 @@ work/
 *.fastq
 *.fastq.gz
 
+../.DS_Store
+../.ipynb_checkpoints/
+../.localized
+../output/
+../Amplicon/
+../*.pdf
+../*.tsv.gz
+../*.xlsx
+../*.ipynb
+../voc/
+../asv_pipeline/
+../samplerun/
+../sra_fastq/
+../NF/
+../nf-training/
+../others/
+../*.tre
+../*.sh
+
