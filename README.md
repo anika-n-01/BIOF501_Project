@@ -62,7 +62,7 @@ This workflow includes the following steps:
 
 Here is visualization of the workflow:
 
-![Workflow Illustration](BIOF501_Project/VSearch_501.png)
+![Workflow Illustration](BIOF501_Project/images/VSearch_501.png)
 
 ---------------------
 
@@ -97,7 +97,7 @@ nextflow run ASVs_main.nf -with-report report.html -with-timeline timeline.html 
 ### Expected Outputs
 
 1) The pipeline should generate a results directory with the following file structure. 
-![Tree Illustration](BIOF501_Project/results_tree.png)
+![Tree Illustration](BIOF501_Project/images/results_tree.png)
 2) The following describes the key output files. 
 - Quality-Controlled Reads: Cleaned reads saved in the results/fastpQC directory.
 - Merged Reads: Paired-end reads merged into single reads in results/mergeReads.
@@ -107,18 +107,18 @@ nextflow run ASVs_main.nf -with-report report.html -with-timeline timeline.html 
 - ASV Count Matrix: A table of ASV abundances across samples in results/createCountMatrix.
 
 3) The key output of ASV count table should be stored in ASV.fasta. Here's an example of the expected output. The first column is populated by the ASV number and the second column is populated with the ASV count present in a particular sample.
-![ASV Count Table Illustration](ASV_count_table-1.png)
+![ASV Count Table Illustration](BIOF501_Project/images/ASV_count_table-1.png)
 
 ### Other outputs
 In addition to the key results, the pipeline also generates the folowing files to help you monitor the execution of the workflow.
 1) report.html- Provides a comprehensive summary of the workflow execution, including statistics on runtime, CPU usage and memory usage. 
-![DAG Illustration](BIOF501_Project/report.png)
+![DAG Illustration](BIOF501_Project/images/report.png)
 2) timeline.html-  Displays a Gantt chart of task execution timelines.
-![Timeline.html Illustration](BIOF501_Project/timeline.png)
+![Timeline.html Illustration](BIOF501_Project/images/timeline.png)
 3) trace.txt- Provides a tabular log of various task-level details. 
-![Text.txt Illustration](BIOF501_Project/text_txt.png)
+![Text.txt Illustration](BIOF501_Project/images/text_txt.png)
 4) dag.png- Provides a visual representation of the workflow as a Directed Acyclic Graph (DAG).
-![DAG Illustration](BIOF501_Project/dag.png)
+![DAG Illustration](BIOF501_Project/images/dag.png)
 
 ## References-
 [1] Barea JM. Future challenges and perspectives for applying microbial biotechnology in sustainable agriculture based on a better understanding of plant-microbiome interactions. Journal of soil science and plant nutrition. 2015 Jun 1;15(2):261–82.
